@@ -1,18 +1,50 @@
-# Multilingual Love Heart ❤️
+# LoveYou ❤️
 
-A generative typographic art experiment in Python that renders a heart silhouette composed of "I love you" in 20 different languages, featuring smooth floating animations and a subtle shimmering effect.
+A small love note in the shape of a heart. It is available as a Python desktop version and as a mobile-ready app for Android and iOS.
 
-<img width="1302" height="752" alt="WhatsApp Image 2026-10-09 at 09 53 02" src="https://github.com/user-attachments/assets/6c2ccffe-f46d-4b2f-9430-36a6a5739beb" />
+## Desktop app
 
+The original desktop version uses Python's standard library:
 
-## Features
-- **Parametric Heart Boundary:** Uses a parametric heart curve to calculate exact scanline boundaries and text placement.
-- **Multilingual Typography:** Cycles dynamically through love phrases in 20 languages with proportional font scaling.
-- **Smooth Animation:** Eased vertical float-in transitions (`cubic ease-out`) with color grading from deep crimson to glowing edges.
-- **Post-Render Shimmer:** Continuous ambient glimmers on random phrases once drawing completes.
-- **Zero External Dependencies:** Built entirely with Python's standard library (`turtle`, `tkinter`, `math`, `random`).
-
-## How to Run
-
-```bash
+```powershell
 python love.py
+```
+
+## Android and iOS
+
+The mobile app uses Vite for the web experience and Capacitor to run it in native Android and iOS shells.
+
+### Run in a browser
+
+Install Node.js, then run:
+
+```powershell
+npm install
+npm run dev
+```
+
+### Build and run on Android
+
+Install Android Studio and its Android SDK, then run:
+
+```powershell
+npm install
+npm run build
+npx cap add android
+npx cap sync android
+npm run android
+```
+
+### Build and run on iOS
+
+iOS builds require macOS and Xcode. On a Mac, run:
+
+```sh
+npm install
+npm run build
+npx cap add ios
+npx cap sync ios
+npm run ios
+```
+
+After changing the web app, run `npm run build` and `npm run sync` to update the native projects. Open the Android project in Android Studio or the iOS project in Xcode to build and distribute the app.
