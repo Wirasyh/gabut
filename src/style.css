@@ -83,6 +83,14 @@ h1 {
   letter-spacing: 0.015em;
 }
 
+.signature {
+  margin: -6px 0 0;
+  color: #c99ba5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
 button {
   min-height: 44px;
   margin-top: 4px;
